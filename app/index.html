@@ -1,0 +1,239 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>BrainCo Robotics</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/motion-ui/dist/motion-ui.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <!--<link rel="stylesheet" href="css/vendor/flipclock.css">-->
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/parallaxssd _styles.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- endbuild -->
+</head>
+<body ng-app="brainCoWebApp" ng-controller="MainCtrl">
+<!--[if lte IE 8]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a
+        href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- Add your site or application content here -->
+<div class=" row expanded" ng-controller="NavCtrl">
+    <div class="row column title-bar" data-responsive-toggle="mobile-menu"
+         data-hide-for="medium">
+        <!--todo-->
+        <div class="column">
+            <div class="float-left">
+                <button class="menu-icon" type="button" data-toggle></button>
+                <div class="title-bar-title">Menu</div>
+            </div>
+            <div class="float-right" style="padding-right:15px">
+                <a href="#"><img src="/images/logo_small_nobackground.png" alt="picture not found"
+                                 width="100px"
+                                 style="margin-top: 7px"></a>
+
+            </div>
+        </div>
+        <!-- For mobile app -->
+        <div class="column">
+            <ul class="vertical menu" id="mobile-menu" data-accordion-menu>
+                <li><a ng-click="goToSection('go')">Home</a></li>
+                <li><a ng-click="goToSection('mission')">Our Mission</a></li>
+                <li><a ng-click="goToSection('companyreview')">Company Review</a></li>
+                <li><a ng-click="goToSection('team')">Our Team</a></li>
+                <li><a ng-click="goToSection('contact')">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- For full screen -->
+    <div class="row" ng-controller="NavCtrl">
+        <div class="column top-bar show-for-medium" id="example-menu"
+             style="background-color: #262626;">
+            <div class="float-left" style="vertical-align: middle">
+                <a ng-click="goToSection('')"><img src="images/logo_small_nobackground_2.png" alt=""
+                                                   width="30px" height="30px"
+                                                   style="margin-top: 7px"></a>
+            </div>
+            <ul class="dropdown menu" data-dropdown-menu style="background-color: #262626;">
+                <li><a ng-click="goToSection('home')">Home</a></li>
+                <li><a ng-click="goToSection('ourmission')">Our Mission</a></li>
+                <li><a ng-click="goToSection('companyreview')">Company Review</a></li>
+                <li><a ng-click="goToSection('team')">Our Team</a></li>
+                <li><a ng-click="goToSection('contact')">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- END for full screen-->
+
+</div>
+
+
+<!--====================================== Presale Commented ======================================-->
+<!--
+<hr style="margin: 0px;">
+-->
+<!--<div class="row expanded">-->
+<!--<div class="alert callout flexgrid" style="margin-bottom: 0px;" data-closable>-->
+<!--<div class="row align-center">-->
+<!--<div class="column small-12">-->
+<!--<h2>Focus 1 Presale starts in:</h2>-->
+<!--</div>-->
+<!--<div class="column row small-12">-->
+<!--<div class="column large-9 clock myflipclock" ></div>-->
+<!--<div class="column large-3 align-center" style="height:100%">-->
+<!--<a href=""><h3>Lear More >></h3></a>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+
+<!--<button class="close-button" aria-label="Dismiss alert"-->
+<!--type="button" data-close>-->
+<!--<a aria-hidden="true" data-toggle="presale-panel-small" >&times;</a>-->
+<!--</button>-->
+<!--</div>-->
+<!--</div>-->
+<article id="orbit-nav" class="slide fs" style="padding-top:1%;">
+    <div class="row expanded align-middle" style="vertical-align: middle">
+        <!--<div class="wrapper row align-middle" style="vertical-align: middle">-->
+            <div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
+                <ul class="orbit-container">
+                    <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;
+                    </button>
+                    <button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;
+                    </button>
+                    <li class="is-active orbit-slide">
+                        <img class="orbit-image" src="images/ortbit_0.png" alt="Space">
+                    </li>
+                    <li class="orbit-slide">
+                        <img class="orbit-image" src="images/orbit_1.png" alt="Space">
+                    </li>
+                    <li class="orbit-slide">
+                        <img class="orbit-image" src="images/ortbit_3.png" alt="Space">
+                    </li>
+                    <li class="orbit-slide">
+                        <img class="orbit-image" src="images/ortbit_4.png" alt="Space">
+                    </li>
+                </ul>
+                <nav class="orbit-bullets" style="margin-top:3%;">
+                    <button class="is-active" data-slide="0"><span class="show-for-sr">First slide details.</span><span
+                            class="show-for-sr">Current Slide</span></button>
+                    <button data-slide="1"><span class="show-for-sr">Second slide details.</span>
+                    </button>
+                    <button data-slide="2"><span class="show-for-sr">Third slide details.</span>
+                    </button>
+                    <button data-slide="3"><span class="show-for-sr">Fourth slide details.</span>
+                    </button>
+                </nav>
+            </div>
+        <!--</div>-->
+    </div>
+</article>
+
+<div ng-if="pageUrl!=='/pledge' && pageUrl!=='/focusone'" ng-controller="MainCtrl">
+
+    <article id="mission" class="slide fs" style="background-color:white">
+        <div class="row expanded align-middle" id="mission" style="vertical-align: middle">
+            <div class="wrapper row align-middle" style="vertical-align: middle">
+                <div class="columns medium-12 large-12 small-12 float-right" style="color:black">
+                    <div class="columns" style="text-align:center"><h2>Company Overview</h2></div>
+                    <div class="columns" style="text-align: middle;">
+                        <!--style="font-size: 30px;"-->
+                        <p>Produce price tag of USD$500 per robotic prosthesis hand -- everyone who needs it can afford it and have a quality life in the way it should.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article id="companyoverview" class="slide fs" style="background-color:white">
+        <div class="row expanded align-middle" id="Companyoverview" style="vertical-align: middle">
+            <div class="wrapper row align-middle" style="vertical-align: middle">
+                <div class="columns medium-12 large-12 small-12 float-right" style="color:black">
+                    <div class="columns" style="text-align:center"><h2>Company Overview</h2></div>
+                    <div class="columns">
+                        <p>BrainRobotics leverages machine learning to produce intelligent prosthesis at a low-cost basis. BrainRobotics focuses on developing EMG (aka Electromyography) controlled robotic prosthesis upper limbs, which can be directly controlled to perform lots of gestures using muscle signal without
+                            significant surgery.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article id="team" class="slide fs" style="background-color:white">
+        <div class="row expanded align-middle" id="Team" style="vertical-align: middle">
+            <div class="wrapper row align-middle" style="vertical-align: middle">
+                <div class="columns medium-12 large-6 small-12 float-right" style="color:black">
+                    <div class="columns">
+                        <div class="row" style="padding-top: 10%">
+                            <header>
+                                <h2 style="color:black; text-align: center;">Team</h2>
+                            </header>
+                        </div>
+                        <div class="row">
+                            <p>CEO Bicheng Han, a PhD candidate at Harvard Center, he has devoted to develop  cost effective intelligent robotic prosthesis hand, everyone who needs it can afford it and have a quality life in the way it.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns medium-12 large-6 small-12 float-left">
+                    <img src="images/team.jpg"/>
+                </div>
+            </div>
+        </div>
+    </article>
+
+<div class="row expanded">
+    <div class="top-bar" style="background-color: #262626">
+        <div class="columns large-3 medium-4 small-7 text-right" style="margin-top: 10px">
+            <p style=""><font color="#FFFFFF">Copyright © 2016 BrainCo</font></p>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+<!-- build:js(.) scripts/vendor.js -->
+<!-- bower:js -->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/angular-touch/angular-touch.js"></script>
+<script src="bower_components/motion-ui/dist/motion-ui.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js({.tmp,app}) scripts/app.js -->
+<script src="js/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+<!--<script src="scripts/app.js"></script>-->
+<script src="scripts/controllers/main_controller.js"></script>
+<script src="scripts/controllers/pledge_controller.js"></script>
+<script src="scripts/controllers/nav_controller.js"></script>
+<script src="js/vendor/jquery.js"></script>
+<script src="js/vendor/foundation.js"></script>
+<script src="js/vendor/foundation.reveal.js"></script>
+<!--<script src="js/vendor/foundation.equalizer.js"></script>-->
+<script src="js/vendor/foundation.reveal.js"></script>
+
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/what-input/what-input.js"></script>
+<script src="bower_components/foundation-sites/dist/foundation.js"></script>
+<script src="js/flipclock/flipclock.min.js"></script>
+<script src="js/app.js"></script>
+<!--<script src="js/parallax_main.js"></script>-->
+<!-- endbuild -->
+
+
+</body>
+</html>
