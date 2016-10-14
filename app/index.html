@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>BrainCo Robotics</title>
+    <title>BrainRobotics</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -12,10 +12,11 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
-    <!--<link rel="stylesheet" href="css/vendor/flipclock.css">-->
+    <link rel="stylesheet" href="css/vendor/flipclock.css">
     <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" href="css/parallaxssd _styles.css">
+    <link rel="stylesheet" href="css/parallax_styles.css">
     <link rel="stylesheet" href="css/custom.css">
+    <link rel="icon" href="favicon.ico">
     <!-- endbuild -->
 </head>
 <body ng-app="brainCoWebApp" ng-controller="MainCtrl">
@@ -35,20 +36,23 @@
                 <div class="title-bar-title">Menu</div>
             </div>
             <div class="float-right" style="padding-right:15px">
-                <a href="#"><img src="/images/logo_small_nobackground.png" alt="picture not found"
-                                 width="100px"
+                <a href="#"><img src="images/logo_small_nobackground.png" alt="" width="20px"
                                  style="margin-top: 7px"></a>
 
             </div>
         </div>
-        <!-- For mobile app -->
         <div class="column">
             <ul class="vertical menu" id="mobile-menu" data-accordion-menu>
-                <li><a ng-click="goToSection('go')">Home</a></li>
-                <li><a ng-click="goToSection('mission')">Our Mission</a></li>
-                <li><a ng-click="goToSection('companyreview')">Company Review</a></li>
-                <li><a ng-click="goToSection('team')">Our Team</a></li>
-                <li><a ng-click="goToSection('contact')">Contact</a></li>
+                <!--<li><a ng-click="goToSection('home')">Home</a></li>-->
+                <!--<li><a ng-click="goToSection('mission')">Our Mission</a></li>-->
+                <!--<li><a ng-click="goToSection('companyreview')">Company Review</a></li>-->
+                <!--<li><a ng-click="goToSection('team')">Our Team</a></li>-->
+                <!--<li><a ng-click="goToSection('contact')">Contact</a></li>-->
+                <li><a href="#aboutus">Home</a></li>
+                <!--<li><a href="#mission">Our Mission</a></li>-->
+                <!--<li><a href="#companyreview">Company Review</a></li>-->
+                <li><a href="#team">Our Team</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </div>
@@ -58,16 +62,21 @@
         <div class="column top-bar show-for-medium" id="example-menu"
              style="background-color: #262626;">
             <div class="float-left" style="vertical-align: middle">
-                <a ng-click="goToSection('')"><img src="images/logo_small_nobackground_2.png" alt=""
+                <a ng-click="goToSection('')"><img src="images/logo_small_nobackground.png" alt=""
                                                    width="30px" height="30px"
                                                    style="margin-top: 7px"></a>
             </div>
             <ul class="dropdown menu" data-dropdown-menu style="background-color: #262626;">
-                <li><a ng-click="goToSection('home')">Home</a></li>
-                <li><a ng-click="goToSection('ourmission')">Our Mission</a></li>
-                <li><a ng-click="goToSection('companyreview')">Company Review</a></li>
-                <li><a ng-click="goToSection('team')">Our Team</a></li>
-                <li><a ng-click="goToSection('contact')">Contact</a></li>
+                <!--<li><a ng-click="goToSection('home')">Home</a></li>-->
+                <!--<li><a ng-click="goToSection('mission')">Our Mission</a></li>-->
+                <!--<li><a ng-click="goToSection('companyreview')">Company Review</a></li>-->
+                <!--<li><a ng-click="goToSection('team')">Our Team</a></li>-->
+                <!--<li><a ng-click="goToSection('contact')">Contact</a></li>-->
+                <li><a href="#aboutus">Home</a></li>
+                <!--<li><a href="#mission">Our Mission</a></li>-->
+                <!--<li><a href="#companyreview">Company Review</a></li>-->
+                <li><a href="#team">Our Team</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </div>
@@ -76,123 +85,181 @@
 </div>
 
 
-<!--====================================== Presale Commented ======================================-->
-<!--
-<hr style="margin: 0px;">
--->
-<!--<div class="row expanded">-->
-<!--<div class="alert callout flexgrid" style="margin-bottom: 0px;" data-closable>-->
-<!--<div class="row align-center">-->
-<!--<div class="column small-12">-->
-<!--<h2>Focus 1 Presale starts in:</h2>-->
-<!--</div>-->
-<!--<div class="column row small-12">-->
-<!--<div class="column large-9 clock myflipclock" ></div>-->
-<!--<div class="column large-3 align-center" style="height:100%">-->
-<!--<a href=""><h3>Lear More >></h3></a>-->
-<!--</div>-->
-<!--</div>-->
-<!--</div>-->
-
-<!--<button class="close-button" aria-label="Dismiss alert"-->
-<!--type="button" data-close>-->
-<!--<a aria-hidden="true" data-toggle="presale-panel-small" >&times;</a>-->
-<!--</button>-->
-<!--</div>-->
-<!--</div>-->
-<article id="orbit-nav" class="slide fs" style="padding-top:1%;">
+<article id="aboutus">
     <div class="row expanded align-middle" style="vertical-align: middle">
         <!--<div class="wrapper row align-middle" style="vertical-align: middle">-->
-            <div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
-                <ul class="orbit-container">
-                    <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;
-                    </button>
-                    <button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;
-                    </button>
-                    <li class="is-active orbit-slide">
-                        <img class="orbit-image" src="images/ortbit_0.png" alt="Space">
-                    </li>
-                    <li class="orbit-slide">
-                        <img class="orbit-image" src="images/orbit_1.png" alt="Space">
-                    </li>
-                    <li class="orbit-slide">
-                        <img class="orbit-image" src="images/ortbit_3.png" alt="Space">
-                    </li>
-                    <li class="orbit-slide">
-                        <img class="orbit-image" src="images/ortbit_4.png" alt="Space">
-                    </li>
-                </ul>
-                <nav class="orbit-bullets" style="margin-top:3%;">
-                    <button class="is-active" data-slide="0"><span class="show-for-sr">First slide details.</span><span
-                            class="show-for-sr">Current Slide</span></button>
-                    <button data-slide="1"><span class="show-for-sr">Second slide details.</span>
-                    </button>
-                    <button data-slide="2"><span class="show-for-sr">Third slide details.</span>
-                    </button>
-                    <button data-slide="3"><span class="show-for-sr">Fourth slide details.</span>
-                    </button>
-                </nav>
-            </div>
+        <div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
+            <ul class="orbit-container">
+                <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;
+                </button>
+                <button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;
+                </button>
+                <li class="is-active orbit-slide">
+                    <img class="orbit-image" src="images/orbit_0.jpg" alt="Space">
+                    <figcaption class="orbit-caption">Our Mission: everyone who needs it can afford it and have a quality life in the way it should.</figcaption>
+                </li>
+                <li class="orbit-slide">
+                    <img class="orbit-image" src="images/orbit_1.jpg" alt="Space">
+                    <figcaption class="orbit-caption">BrainRobotics leverages machine learning to produce intelligent prosthesis at a low-cost basis. </figcaption>
+                </li>
+                <li class="orbit-slide">
+                    <img class="orbit-image" src="images/orbit_2.jpg" alt="Space">
+                    <figcaption class="orbit-caption" style="font-weight: 200">BrainRobotics focuses on developing EMG (aka Electromyography) controlled robotic prosthesis upper limbs. </figcaption>
+                </li>
+                <li class="orbit-slide">
+                    <img class="orbit-image" src="images/orbit_3.jpg" alt="Space">
+                    <figcaption class="orbit-caption">Prosthesis limbs can be directly controlled to perform lots of gestures using muscle signal without significant surgery.</figcaption>
+                </li>
+                <li class="orbit-slide">
+                    <img class="orbit-image" src="images/orbit_4.jpg" alt="Space">
+                    <figcaption class="orbit-caption">And they are customable!</figcaption>
+                </li>
+            </ul>
+            <nav class="orbit-bullets" style="padding-top: 5px;">
+                <button class="is-active" data-slide="0"><span class="show-for-sr">First slide details.</span><span
+                        class="show-for-sr">Current Slide</span></button>
+                <button data-slide="1"><span class="show-for-sr">Second slide details.</span>
+                </button>
+                <button data-slide="2"><span class="show-for-sr">Third slide details.</span>
+                </button>
+                <button data-slide="3"><span class="show-for-sr">Fourth slide details.</span>
+                </button>
+                <button data-slide="4"><span class="show-for-sr">Fifth slide details.</span>
+                </button>
+            </nav>
+        </div>
         <!--</div>-->
     </div>
 </article>
 
-<div ng-if="pageUrl!=='/pledge' && pageUrl!=='/focusone'" ng-controller="MainCtrl">
+<!--<div ng-if="pageUrl!=='/pledge' && pageUrl!=='/focusone'" ng-controller="MainCtrl">-->
+    <!--<article id="mission" class="slide fs" style="background-color:white">-->
+        <!--<div class="row expanded align-middle" id="mission" style="vertical-align: middle">-->
+            <!--<div class="wrapper row align-middle" style="vertical-align: middle">-->
+                <!--<div class="columns medium-12 large-12 small-12 float-right" style="color:black">-->
+                    <!--<div class="columns" style="text-align:center"><h2>Our Mission</h2></div>-->
+                    <!--<div class="columns" style="padding-top: 3px;">-->
+                        <!--<p>Produce price tag of USD$500 per robotic prosthesis hand &#45;&#45; everyone who needs it can afford it and have a quality life in the way it should.</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</article>-->
 
-    <article id="mission" class="slide fs" style="background-color:white">
-        <div class="row expanded align-middle" id="mission" style="vertical-align: middle">
-            <div class="wrapper row align-middle" style="vertical-align: middle">
-                <div class="columns medium-12 large-12 small-12 float-right" style="color:black">
-                    <div class="columns" style="text-align:center"><h2>Company Overview</h2></div>
-                    <div class="columns" style="text-align: middle;">
-                        <!--style="font-size: 30px;"-->
-                        <p>Produce price tag of USD$500 per robotic prosthesis hand -- everyone who needs it can afford it and have a quality life in the way it should.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </article>
-
-    <article id="companyoverview" class="slide fs" style="background-color:white">
-        <div class="row expanded align-middle" id="Companyoverview" style="vertical-align: middle">
-            <div class="wrapper row align-middle" style="vertical-align: middle">
-                <div class="columns medium-12 large-12 small-12 float-right" style="color:black">
-                    <div class="columns" style="text-align:center"><h2>Company Overview</h2></div>
-                    <div class="columns">
-                        <p>BrainRobotics leverages machine learning to produce intelligent prosthesis at a low-cost basis. BrainRobotics focuses on developing EMG (aka Electromyography) controlled robotic prosthesis upper limbs, which can be directly controlled to perform lots of gestures using muscle signal without
-                            significant surgery.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </article>
+    <!--<article id="companyreview" class="slide fs" style="background-color:white">-->
+        <!--<div class="row expanded align-middle" id="companyreview" style="vertical-align: middle">-->
+            <!--<div class="wrapper row align-middle" style="vertical-align: middle">-->
+                <!--<div class="columns medium-12 large-12 small-12 float-right" style="color:black">-->
+                    <!--<div class="columns" style="text-align:center"><h2>Company Review</h2></div>-->
+                    <!--<div class="columns" style="padding-top: 3px;">-->
+                        <!--<p>BrainRobotics leverages machine learning to produce intelligent prosthesis at a low-cost basis. BrainRobotics focuses on developing EMG (aka Electromyography) controlled robotic prosthesis upper limbs, which can be directly controlled to perform lots of gestures using muscle signal without significant surgery.</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</article>-->
 
     <article id="team" class="slide fs" style="background-color:white">
         <div class="row expanded align-middle" id="Team" style="vertical-align: middle">
             <div class="wrapper row align-middle" style="vertical-align: middle">
                 <div class="columns medium-12 large-6 small-12 float-right" style="color:black">
                     <div class="columns">
-                        <div class="row" style="padding-top: 10%">
+                        <div class="row" style="vertical-align: middle">
                             <header>
                                 <h2 style="color:black; text-align: center;">Team</h2>
                             </header>
                         </div>
-                        <div class="row">
+                        <div class="row" style="padding-top: 3px;">
                             <p>CEO Bicheng Han, a PhD candidate at Harvard Center, he has devoted to develop  cost effective intelligent robotic prosthesis hand, everyone who needs it can afford it and have a quality life in the way it.</p>
                         </div>
                     </div>
                 </div>
-                <div class="columns medium-12 large-6 small-12 float-left">
+                <div class="columns medium-12 large-6 small-12 float-left" style="margin-bottom: 5ex">
                     <img src="images/team.jpg"/>
                 </div>
+
             </div>
         </div>
     </article>
 
-<div class="row expanded">
+
+    <hr style="width:100%; margin-bottom:0px;">
+<!--    <div class="row expanded" id="contact"
+         style="padding-top:20px; background-color: #262626">
+        <div class="small-6 small-offset-3 large-4 large-offset-4 columns"
+             style="text-align: center">
+            <h1 style="font-family: Arial; font-weight: normal;">Contact</h1>
+        </div>
+    </div>-->
+    <!--padding-bottom: 3px; padding-top:3px;-->
+    <div id="contact" class="row expanded" style="background-color:
+    #4C4C4C; text-align: right; padding-bottom: 20px">
+
+        <div class="small-6 small-offset-3 large-4 large-offset-4 columns"
+             style="text-align: center;">
+            <h1 style="font-family: Arial; color:white; font-weight: normal;">Contact</h1>
+        </div>
+        <div class="small-12 large-12 shrink columns" style="text-align: left; floating: left;">
+            <div class="small-4 large-1 large-offset-1 shrink columns">
+                <a target="_parent" href="https://www.facebook.com/BrainRobotics-170588133391308/?fref=ts"><img
+                        src="webicons-master/webicons/webicon-facebook.png"></a>
+            </div>
+            <div class="small-4 large-1 shrink columns " style="text-align: left; floating: left;">
+                <a target="_parent" href="https://twitter.com/BrainRobotics?lang=en"><img
+                        src="webicons-master/webicons/webicon-twitter.png"></a>
+            </div>
+            <div class="row" style="line-height: 1;">
+                    <p style="font-family:'Open Sans'; line-height: 1; sans-serif; font-weight:300; color: white; text-align: right; padding: 0px; margin-bottom: 0;">Address: 120 Beacon St. Suite 201, Somerville, MA 02143</p>
+                    <p style="font-family:'Open Sans', sans-serif; font-weight:400; color: white;
+                     text-align: right; margin-bottom: 0;">
+                        <a href="mailto: general@brainrobotics.com">Email: general@brainrobotics.com</a></p>     <!--todo-->
+            </div>
+        </div>
+
+    </div>
+
+    <!--<div id="msg" style="display:none">-->
+        <!--<img src="images/artwork 1_poster_.png" style="height: 50px; width:60px; min-width:60px;">-->
+    <!--</div>-->
+
+    <nav ng-controller="NavCtrl">
+        <ul>
+            <ul><a href="#aboutus"><span class="nav-dot"></span><span
+                    class="nav-label">About Us</span></a></ul>
+            <!--<li><a href="#mission"><span class="nav-dot"></span><span-->
+                    <!--class="nav-label">Our Mission</span></a></li>-->
+            <!--<li><a href="#companyreview"><span class="nav-dot"></span><span-->
+                    <!--class="nav-label">Company Review</span></a></li>-->
+            <li><a href="#team"><span class="nav-dot"></span><span
+                    class="nav-label">Team</span></a></li>
+            <li><a href="#contact"><span class="nav-dot"></span><span
+                    class="nav-label">Contact Us</span></a></li>
+        </ul>
+    </nav>
+</div>
+
     <div class="top-bar" style="background-color: #262626">
-        <div class="columns large-3 medium-4 small-7 text-right" style="margin-top: 10px">
-            <p style=""><font color="#FFFFFF">Copyright © 2016 BrainCo</font></p>
+     <!--   <div class="float-left" style="vertical-align: middle">
+            <a ng-click="goToSection('')"><img src="images/logo_small_nobackground.png" alt="error" width="30px" height="30px" style="padding-top: 30%"></a>
+        </div>-->
+        <div class="float-left small-4 medium-6 large-4 column">
+            <div class="small-12 large-12 column" data-equalizer-watch="message"
+                 style="text-align: center; padding-top: 1%">
+                <div class="small-4 shrink columns">
+                    <img src="images/logo_small_nobackground.png">
+                </div>
+                <!--<div class="small-4 shrink columns">-->
+                    <!--<a href="http://wwww.facebook.com/braincotech"><img-->
+                            <!--src="webicons-master/webicons/webicon-facebook.png"></a>-->
+                <!--</div>-->
+                <!--<div class="small-4 shrink columns end">-->
+                    <!--<a href="https://twitter.com/BrainRobotics?lang=en"><img-->
+                            <!--src="webicons-master/webicons/webicon-twitter.png"></a>-->
+                <!--</div>-->
+            </div>
+        </div>
+        <div class="columns large-4 medium-4 small-7 text-right" style="margin-top: 10px">
+            <p style="color: white">Copyright © 2016 BrainRobotics</p>
         </div>
     </div>
 </div>
@@ -216,14 +283,14 @@
 
 <!-- build:js({.tmp,app}) scripts/app.js -->
 <script src="js/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-<!--<script src="scripts/app.js"></script>-->
+<script src="scripts/app.js"></script>
 <script src="scripts/controllers/main_controller.js"></script>
 <script src="scripts/controllers/pledge_controller.js"></script>
 <script src="scripts/controllers/nav_controller.js"></script>
 <script src="js/vendor/jquery.js"></script>
 <script src="js/vendor/foundation.js"></script>
 <script src="js/vendor/foundation.reveal.js"></script>
-<!--<script src="js/vendor/foundation.equalizer.js"></script>-->
+<script src="js/vendor/foundation.equalizer.js"></script>
 <script src="js/vendor/foundation.reveal.js"></script>
 
 <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -231,7 +298,7 @@
 <script src="bower_components/foundation-sites/dist/foundation.js"></script>
 <script src="js/flipclock/flipclock.min.js"></script>
 <script src="js/app.js"></script>
-<!--<script src="js/parallax_main.js"></script>-->
+<script src="js/parallax_main.js"></script>
 <!-- endbuild -->
 
 
